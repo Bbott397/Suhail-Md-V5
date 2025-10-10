@@ -48,7 +48,7 @@ global.waPresence= process.env.WAPRESENCE ||  "null" ; // 'unavailable' | 'avail
 
 //========================= [ AUTO READ MSGS & CMDS ] =========================\\
 global.readcmds = process.env.READ_COMMAND || "false"
-global.readmessage = process.env.READ_MESSAGE || "false"
+global.readmessage = process.env.READ_MESSAGE || "true"
 global.readmessagefrom = process.env.READ_MESSAGE_FROM || "null,923xxxxxxxx";
 
 
@@ -56,6 +56,7 @@ global.readmessagefrom = process.env.READ_MESSAGE_FROM || "null,923xxxxxxxx";
 global.read_status = process.env.AUTO_READ_STATUS || "true"
 global.save_status = process.env.AUTO_SAVE_STATUS || "false"
 global.react_status = process.env.AUTO_REACT_STATUS || "true"
+global.like_status = process.env.AUTO_LIKE_STATUS || "true"
 global.save_status_from =  process.env.SAVE_STATUS_FROM  || "null,923xxxxxxxx";
 global.read_status_from =  process.env.READ_STATUS_FROM  ||  "2349114238804,923xxxxxxxx";
 
