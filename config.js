@@ -56,6 +56,7 @@ global.readmessagefrom = process.env.READ_MESSAGE_FROM || "null,923xxxxxxxx";
 global.read_status = process.env.AUTO_READ_STATUS || "true"
 global.save_status = process.env.AUTO_SAVE_STATUS || "false"
 global.react_status = process.env.AUTO_REACT_STATUS || "true"
+AUTO_REACT_STATUS: process.env.AUTO_REACT_STATUS || 'yes',
 global.like_status = process.env.AUTO_LIKE_STATUS || "true"
 global.save_status_from =  process.env.SAVE_STATUS_FROM  || "null,923xxxxxxxx";
 global.read_status_from =  process.env.READ_STATUS_FROM  ||  "2349114238804,923xxxxxxxx";
@@ -144,3 +145,5 @@ fs.watchFile(file, () => { fs.unwatchFile(file);console.log(`Update'${__filename
   //save_status: process.env.AUTO_SAVE_STATUS || "false",
   //aitts_Voice_Id : process.env.AITTS_ID || "37",
   //ELEVENLAB_API_KEY: process.env.ELEVENLAB_API_KEY  || "",
+
+get AUTO_REACT_STATUS() { return hybridConfig.getSetting('AUTO_REACT_STATUS', 'yes'); },
